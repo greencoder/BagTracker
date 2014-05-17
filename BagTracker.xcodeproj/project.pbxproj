@@ -1,0 +1,515 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B03FBC819258C540057FCCA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B03FBC719258C540057FCCA /* Foundation.framework */; };
+		2B03FBCA19258C540057FCCA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B03FBC919258C540057FCCA /* CoreGraphics.framework */; };
+		2B03FBCC19258C540057FCCA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B03FBCB19258C540057FCCA /* UIKit.framework */; };
+		2B03FBD219258C540057FCCA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2B03FBD019258C540057FCCA /* InfoPlist.strings */; };
+		2B03FBD419258C540057FCCA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B03FBD319258C540057FCCA /* main.m */; };
+		2B03FBD819258C540057FCCA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B03FBD719258C540057FCCA /* AppDelegate.m */; };
+		2B03FBDB19258C540057FCCA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B03FBD919258C540057FCCA /* Main.storyboard */; };
+		2B03FBDE19258C540057FCCA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B03FBDD19258C540057FCCA /* ViewController.m */; };
+		2B03FBE019258C540057FCCA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B03FBDF19258C540057FCCA /* Images.xcassets */; };
+		2B03FBE719258C540057FCCA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B03FBE619258C540057FCCA /* XCTest.framework */; };
+		2B03FBE819258C540057FCCA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B03FBC719258C540057FCCA /* Foundation.framework */; };
+		2B03FBE919258C540057FCCA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B03FBCB19258C540057FCCA /* UIKit.framework */; };
+		2B03FBF119258C540057FCCA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2B03FBEF19258C540057FCCA /* InfoPlist.strings */; };
+		2B03FBF319258C540057FCCA /* BagTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B03FBF219258C540057FCCA /* BagTrackerTests.m */; };
+		2B03FBFD19258F710057FCCA /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B03FBFC19258F710057FCCA /* CoreBluetooth.framework */; };
+		2B03FBFF19258F780057FCCA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B03FBFE19258F780057FCCA /* CoreLocation.framework */; };
+		2B03FC451927C8F90057FCCA /* settings_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B03FC441927C8F90057FCCA /* settings_icon@2x.png */; };
+		2B03FC481927CC800057FCCA /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B03FC471927CC800057FCCA /* SettingsViewController.m */; };
+		2B03FC4A1927CDB20057FCCA /* settings_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B03FC491927CDB20057FCCA /* settings_icon.png */; };
+		2B03FC4F1927D6310057FCCA /* app_icon_58.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B03FC4B1927D6310057FCCA /* app_icon_58.png */; };
+		2B03FC511927D6310057FCCA /* app_icon_80.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B03FC4D1927D6310057FCCA /* app_icon_80.png */; };
+		2B03FC521927D6310057FCCA /* app_icon_120.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B03FC4E1927D6310057FCCA /* app_icon_120.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2B03FBEA19258C540057FCCA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B03FBBC19258C540057FCCA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B03FBC319258C540057FCCA;
+			remoteInfo = BagTracker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2B03FBC419258C540057FCCA /* BagTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BagTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B03FBC719258C540057FCCA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2B03FBC919258C540057FCCA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2B03FBCB19258C540057FCCA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2B03FBCF19258C540057FCCA /* BagTracker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BagTracker-Info.plist"; sourceTree = "<group>"; };
+		2B03FBD119258C540057FCCA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2B03FBD319258C540057FCCA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2B03FBD519258C540057FCCA /* BagTracker-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BagTracker-Prefix.pch"; sourceTree = "<group>"; };
+		2B03FBD619258C540057FCCA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2B03FBD719258C540057FCCA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2B03FBDA19258C540057FCCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2B03FBDC19258C540057FCCA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2B03FBDD19258C540057FCCA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2B03FBDF19258C540057FCCA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2B03FBE519258C540057FCCA /* BagTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BagTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B03FBE619258C540057FCCA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		2B03FBEE19258C540057FCCA /* BagTrackerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BagTrackerTests-Info.plist"; sourceTree = "<group>"; };
+		2B03FBF019258C540057FCCA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2B03FBF219258C540057FCCA /* BagTrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BagTrackerTests.m; sourceTree = "<group>"; };
+		2B03FBFC19258F710057FCCA /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		2B03FBFE19258F780057FCCA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		2B03FC441927C8F90057FCCA /* settings_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings_icon@2x.png"; sourceTree = "<group>"; };
+		2B03FC461927CC800057FCCA /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		2B03FC471927CC800057FCCA /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		2B03FC491927CDB20057FCCA /* settings_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings_icon.png; sourceTree = "<group>"; };
+		2B03FC4B1927D6310057FCCA /* app_icon_58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app_icon_58.png; sourceTree = "<group>"; };
+		2B03FC4D1927D6310057FCCA /* app_icon_80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app_icon_80.png; sourceTree = "<group>"; };
+		2B03FC4E1927D6310057FCCA /* app_icon_120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app_icon_120.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2B03FBC119258C540057FCCA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B03FBFF19258F780057FCCA /* CoreLocation.framework in Frameworks */,
+				2B03FBFD19258F710057FCCA /* CoreBluetooth.framework in Frameworks */,
+				2B03FBCA19258C540057FCCA /* CoreGraphics.framework in Frameworks */,
+				2B03FBCC19258C540057FCCA /* UIKit.framework in Frameworks */,
+				2B03FBC819258C540057FCCA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B03FBE219258C540057FCCA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B03FBE719258C540057FCCA /* XCTest.framework in Frameworks */,
+				2B03FBE919258C540057FCCA /* UIKit.framework in Frameworks */,
+				2B03FBE819258C540057FCCA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2B03FBBB19258C540057FCCA = {
+			isa = PBXGroup;
+			children = (
+				2B03FBCD19258C540057FCCA /* BagTracker */,
+				2B03FBEC19258C540057FCCA /* BagTrackerTests */,
+				2B03FBC619258C540057FCCA /* Frameworks */,
+				2B03FBC519258C540057FCCA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2B03FBC519258C540057FCCA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2B03FBC419258C540057FCCA /* BagTracker.app */,
+				2B03FBE519258C540057FCCA /* BagTrackerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2B03FBC619258C540057FCCA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B03FBFE19258F780057FCCA /* CoreLocation.framework */,
+				2B03FBFC19258F710057FCCA /* CoreBluetooth.framework */,
+				2B03FBC719258C540057FCCA /* Foundation.framework */,
+				2B03FBC919258C540057FCCA /* CoreGraphics.framework */,
+				2B03FBCB19258C540057FCCA /* UIKit.framework */,
+				2B03FBE619258C540057FCCA /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2B03FBCD19258C540057FCCA /* BagTracker */ = {
+			isa = PBXGroup;
+			children = (
+				2B03FC431927C8F90057FCCA /* Assets */,
+				2B03FBD619258C540057FCCA /* AppDelegate.h */,
+				2B03FBD719258C540057FCCA /* AppDelegate.m */,
+				2B03FBD919258C540057FCCA /* Main.storyboard */,
+				2B03FBDC19258C540057FCCA /* ViewController.h */,
+				2B03FBDD19258C540057FCCA /* ViewController.m */,
+				2B03FBDF19258C540057FCCA /* Images.xcassets */,
+				2B03FBCE19258C540057FCCA /* Supporting Files */,
+				2B03FC461927CC800057FCCA /* SettingsViewController.h */,
+				2B03FC471927CC800057FCCA /* SettingsViewController.m */,
+			);
+			path = BagTracker;
+			sourceTree = "<group>";
+		};
+		2B03FBCE19258C540057FCCA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2B03FBCF19258C540057FCCA /* BagTracker-Info.plist */,
+				2B03FBD019258C540057FCCA /* InfoPlist.strings */,
+				2B03FBD319258C540057FCCA /* main.m */,
+				2B03FBD519258C540057FCCA /* BagTracker-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2B03FBEC19258C540057FCCA /* BagTrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				2B03FBF219258C540057FCCA /* BagTrackerTests.m */,
+				2B03FBED19258C540057FCCA /* Supporting Files */,
+			);
+			path = BagTrackerTests;
+			sourceTree = "<group>";
+		};
+		2B03FBED19258C540057FCCA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2B03FBEE19258C540057FCCA /* BagTrackerTests-Info.plist */,
+				2B03FBEF19258C540057FCCA /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2B03FC431927C8F90057FCCA /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				2B03FC4B1927D6310057FCCA /* app_icon_58.png */,
+				2B03FC4D1927D6310057FCCA /* app_icon_80.png */,
+				2B03FC4E1927D6310057FCCA /* app_icon_120.png */,
+				2B03FC491927CDB20057FCCA /* settings_icon.png */,
+				2B03FC441927C8F90057FCCA /* settings_icon@2x.png */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2B03FBC319258C540057FCCA /* BagTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B03FBF619258C550057FCCA /* Build configuration list for PBXNativeTarget "BagTracker" */;
+			buildPhases = (
+				2B03FBC019258C540057FCCA /* Sources */,
+				2B03FBC119258C540057FCCA /* Frameworks */,
+				2B03FBC219258C540057FCCA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BagTracker;
+			productName = BagTracker;
+			productReference = 2B03FBC419258C540057FCCA /* BagTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2B03FBE419258C540057FCCA /* BagTrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B03FBF919258C550057FCCA /* Build configuration list for PBXNativeTarget "BagTrackerTests" */;
+			buildPhases = (
+				2B03FBE119258C540057FCCA /* Sources */,
+				2B03FBE219258C540057FCCA /* Frameworks */,
+				2B03FBE319258C540057FCCA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B03FBEB19258C540057FCCA /* PBXTargetDependency */,
+			);
+			name = BagTrackerTests;
+			productName = BagTrackerTests;
+			productReference = 2B03FBE519258C540057FCCA /* BagTrackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2B03FBBC19258C540057FCCA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Newman Creative";
+				TargetAttributes = {
+					2B03FBE419258C540057FCCA = {
+						TestTargetID = 2B03FBC319258C540057FCCA;
+					};
+				};
+			};
+			buildConfigurationList = 2B03FBBF19258C540057FCCA /* Build configuration list for PBXProject "BagTracker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2B03FBBB19258C540057FCCA;
+			productRefGroup = 2B03FBC519258C540057FCCA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2B03FBC319258C540057FCCA /* BagTracker */,
+				2B03FBE419258C540057FCCA /* BagTrackerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2B03FBC219258C540057FCCA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B03FBE019258C540057FCCA /* Images.xcassets in Resources */,
+				2B03FC511927D6310057FCCA /* app_icon_80.png in Resources */,
+				2B03FC4A1927CDB20057FCCA /* settings_icon.png in Resources */,
+				2B03FC521927D6310057FCCA /* app_icon_120.png in Resources */,
+				2B03FBD219258C540057FCCA /* InfoPlist.strings in Resources */,
+				2B03FC4F1927D6310057FCCA /* app_icon_58.png in Resources */,
+				2B03FBDB19258C540057FCCA /* Main.storyboard in Resources */,
+				2B03FC451927C8F90057FCCA /* settings_icon@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B03FBE319258C540057FCCA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B03FBF119258C540057FCCA /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2B03FBC019258C540057FCCA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B03FBDE19258C540057FCCA /* ViewController.m in Sources */,
+				2B03FBD819258C540057FCCA /* AppDelegate.m in Sources */,
+				2B03FBD419258C540057FCCA /* main.m in Sources */,
+				2B03FC481927CC800057FCCA /* SettingsViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B03FBE119258C540057FCCA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B03FBF319258C540057FCCA /* BagTrackerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2B03FBEB19258C540057FCCA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B03FBC319258C540057FCCA /* BagTracker */;
+			targetProxy = 2B03FBEA19258C540057FCCA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2B03FBD019258C540057FCCA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B03FBD119258C540057FCCA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2B03FBD919258C540057FCCA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B03FBDA19258C540057FCCA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2B03FBEF19258C540057FCCA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B03FBF019258C540057FCCA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2B03FBF419258C550057FCCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2B03FBF519258C550057FCCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2B03FBF719258C550057FCCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BagTracker/BagTracker-Prefix.pch";
+				INFOPLIST_FILE = "BagTracker/BagTracker-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2B03FBF819258C550057FCCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BagTracker/BagTracker-Prefix.pch";
+				INFOPLIST_FILE = "BagTracker/BagTracker-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		2B03FBFA19258C550057FCCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BagTracker.app/BagTracker";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BagTracker/BagTracker-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "BagTrackerTests/BagTrackerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		2B03FBFB19258C550057FCCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BagTracker.app/BagTracker";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BagTracker/BagTracker-Prefix.pch";
+				INFOPLIST_FILE = "BagTrackerTests/BagTrackerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2B03FBBF19258C540057FCCA /* Build configuration list for PBXProject "BagTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B03FBF419258C550057FCCA /* Debug */,
+				2B03FBF519258C550057FCCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B03FBF619258C550057FCCA /* Build configuration list for PBXNativeTarget "BagTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B03FBF719258C550057FCCA /* Debug */,
+				2B03FBF819258C550057FCCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B03FBF919258C550057FCCA /* Build configuration list for PBXNativeTarget "BagTrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B03FBFA19258C550057FCCA /* Debug */,
+				2B03FBFB19258C550057FCCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2B03FBBC19258C540057FCCA /* Project object */;
+}
