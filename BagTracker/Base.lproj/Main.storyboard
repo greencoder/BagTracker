@@ -54,13 +54,14 @@
                     <navigationItem key="navigationItem" title="BagTracker" id="Dhl-N1-tmU">
                         <barButtonItem key="leftBarButtonItem" image="settings_icon.png" id="S9t-j6-CkS">
                             <connections>
-                                <segue destination="kO8-ld-idm" kind="modal" id="jmt-El-3ba"/>
+                                <segue destination="kO8-ld-idm" kind="modal" identifier="SettingsSegue" id="jmt-El-3ba"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="distanceLabel" destination="NAf-W2-7c4" id="tHB-Qf-wML"/>
+                        <outlet property="trackingSwitch" destination="lE1-Ol-fQZ" id="LUg-Gz-Dhw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

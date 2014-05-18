@@ -9,9 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 #import <CoreLocation/CoreLocation.h>
+#import "SettingsViewController.h"
 
-@interface ViewController : UIViewController  <CLLocationManagerDelegate>
+@interface ViewController : UIViewController  <CLLocationManagerDelegate, SettingsDelegate>
 
+@property (nonatomic, assign) IBOutlet UISwitch *trackingSwitch;
 @property (nonatomic, strong) IBOutlet UILabel *distanceLabel;
 
 @property (nonatomic, strong) CLLocationManager *locationManager;

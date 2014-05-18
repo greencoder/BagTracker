@@ -10,24 +10,15 @@
 
 @implementation ViewController
 
+#pragma mark - View Lifecycle Methods
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    // Make sure we have configuration values set
-    NSDictionary *settings = [self retrieveSettings];
-    
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.delegate = self;
-
-    NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:settings[@"uuid"]];
-    NSUInteger major = [settings[@"major"] integerValue];
-    NSUInteger minor = [settings[@"minor"] integerValue];
     
-    self.beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid
-                                                                major:major
-                                                                minor:minor
-                                                           identifier:@"com.example.bagtracker"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,14 +26,29 @@
     [super didReceiveMemoryWarning];
 }
 
+#pragma mark - Interface Methods
+
 - (IBAction)toggleSwitch:(id)sender
 {
     UISwitch *mySwitch = sender;
-    if (mySwitch.on) {
-        [self.locationManager startMonitoringForRegion:self.beaconRegion];
+
+    if (mySwitch.isOn) {
+        NSLog(@"Start Monitoring");
+        
+        // Load the beacon region
+        self.beaconRegion = [self beaconRegionForSettings];
+        
+        // Restart the beacon ranging
+        [self.locationManager startRangingBeaconsInRegion:self.beaconRegion];
+        
     }
     else {
+        NSLog(@"Stop Monitoring");
+
         [self.locationManager stopMonitoringForRegion:self.beaconRegion];
+        [self.locationManager stopRangingBeaconsInRegion:self.beaconRegion];
+
+        self.distanceLabel.text = @"--";
     }
 }
 
@@ -60,6 +66,7 @@
     NSLog(@"Left region");
     [self createNotification:@"Your Bag is Gone"];
     [self.locationManager stopRangingBeaconsInRegion:self.beaconRegion];
+    self.distanceLabel.text = @"--";
 }
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
@@ -88,17 +95,34 @@
     [[UIApplication sharedApplication] presentLocalNotificationNow:localNotification];
 }
 
+#pragma mark - Settings Methods
+
+- (CLBeaconRegion *)beaconRegionForSettings
+{
+    NSDictionary *settings = [self retrieveSettings];
+    
+    NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:settings[@"uuid"]];
+    NSInteger major = [settings[@"major"] integerValue];
+    NSInteger minor = [settings[@"minor"] integerValue];
+    
+    CLBeaconRegion *region = [[CLBeaconRegion alloc] initWithProximityUUID:uuid
+                                                                     major:major
+                                                                     minor:minor
+                                                                identifier:@"com.example.BagTracker"];
+    return region;
+}
+
 - (NSDictionary *)retrieveSettings
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
-    // If no value is set, put default values in
+    // If our values are not in NSUserDefaults, register the default values
     if (![defaults stringForKey:@"uuid"]) {
     
         NSLog(@"Setting Default Values");
         
         NSDictionary *defaultPreferences = @{
-            @"uuid": @"2F234454-CF6D-4A0F-ADF2-F4911BA9FFA7",
+            @"uuid": @"2F234454-CF6D-4A0F-ADF2-F4911BA9FFA6",
             @"major": @(1),
             @"minor": @(1),
         };
@@ -111,6 +135,40 @@
     // Return the settings
     NSDictionary *settingsDict = [defaults dictionaryWithValuesForKeys:@[@"uuid", @"major", @"minor"]];
     return settingsDict;
+    
+}
+
+#pragma mark - Storyboard Segue
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"SettingsSegue"])
+    {
+        UINavigationController *nav = [segue destinationViewController];
+        SettingsViewController *vc = [[nav childViewControllers] firstObject];
+        vc.delegate = self;
+    }
+}
+
+#pragma mark - SettingsDelegate methods
+
+- (void)didUpdateSettings
+{
+    // If the switch is on, that means that it's monitoring with the settings
+    // that were in place before the user updated. We need to stop monitoring,
+    // reload the settings, and start monitoring again.
+    
+    if (self.trackingSwitch.isOn) {
+
+        NSLog(@"Restarting region monitoring with new settings.");
+        [self.locationManager stopRangingBeaconsInRegion:self.beaconRegion];
+
+        // Reload the beacon region
+        self.beaconRegion = [self beaconRegionForSettings];
+
+        // Restart the beacon ranging
+        [self.locationManager startRangingBeaconsInRegion:self.beaconRegion];
+    }
     
 }
 

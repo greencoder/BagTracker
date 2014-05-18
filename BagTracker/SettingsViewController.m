@@ -39,6 +39,11 @@
 - (IBAction)didPressDone:(id)sender
 {
     [self saveSettings];
+    
+    // We call the delegate method so the presenting view controller
+    // can restart any montioring with the new settings
+    [self.delegate didUpdateSettings];
+    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -54,7 +59,7 @@
     NSNumber *minor = @(self.minorField.text.integerValue);
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:uuid forKey:@"UUID"];
+    [defaults setObject:uuid forKey:@"uuid"];
     [defaults setObject:major forKey:@"major"];
     [defaults setObject:minor forKey:@"minor"];
     [defaults synchronize];
