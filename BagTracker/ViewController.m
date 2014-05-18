@@ -18,7 +18,9 @@
     
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.delegate = self;
-    
+
+    // Make sure that default settings are created if needed
+    [self retrieveSettings];
 }
 
 - (void)didReceiveMemoryWarning
@@ -38,8 +40,11 @@
         // Load the beacon region
         self.beaconRegion = [self beaconRegionForSettings];
         
-        // Restart the beacon ranging
-        [self.locationManager startRangingBeaconsInRegion:self.beaconRegion];
+        // Ask for the state
+        [self.locationManager requestStateForRegion:self.beaconRegion];
+        
+        // Start the region monitoring
+        [self.locationManager startMonitoringForRegion:self.beaconRegion];
         
     }
     else {
@@ -74,7 +79,28 @@
     NSLog(@"Failed with error: %@", error);
 }
 
--(void)locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region
+- (void)locationManager:(CLLocationManager *)manager didDetermineState:(CLRegionState)state forRegion:(CLRegion *)region
+{
+    // We have to use this delegate method in the case that region monitoring start but
+    // core location thinks we are already inside a region
+    
+    switch(state) {
+        case CLRegionStateInside:
+            NSLog(@"CLRegionStateInside");
+            [self.locationManager startRangingBeaconsInRegion:self.beaconRegion];
+            break;
+        case CLRegionStateOutside:
+            [self.locationManager stopRangingBeaconsInRegion:self.beaconRegion];
+            NSLog(@"CLRegionStateOutside");
+            break;
+        case CLRegionStateUnknown:
+            NSLog(@"CLRegionStateUnknown");
+            break;
+    }
+    
+}
+
+- (void)locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region
 {
     CLBeacon *beacon = [beacons lastObject];
     CGFloat accuracy = beacon.accuracy;
@@ -108,7 +134,12 @@
     CLBeaconRegion *region = [[CLBeaconRegion alloc] initWithProximityUUID:uuid
                                                                      major:major
                                                                      minor:minor
-                                                                identifier:@"com.example.BagTracker"];
+                                                                identifier:@"com.getnewman.BagTracker"];
+    
+    region.notifyOnEntry = YES;
+    region.notifyOnExit = YES;
+    region.notifyEntryStateOnDisplay = YES;
+    
     return region;
 }
 
@@ -161,13 +192,14 @@
     if (self.trackingSwitch.isOn) {
 
         NSLog(@"Restarting region monitoring with new settings.");
-        [self.locationManager stopRangingBeaconsInRegion:self.beaconRegion];
+        [self.locationManager stopMonitoringForRegion:self.beaconRegion];
 
         // Reload the beacon region
         self.beaconRegion = [self beaconRegionForSettings];
 
         // Restart the beacon ranging
-        [self.locationManager startRangingBeaconsInRegion:self.beaconRegion];
+        [self.locationManager startMonitoringForRegion:self.beaconRegion];
+        [self.locationManager requestStateForRegion:self.beaconRegion];
     }
     
 }
